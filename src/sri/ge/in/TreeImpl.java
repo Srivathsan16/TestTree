@@ -1,5 +1,6 @@
 package sri.ge.in;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class TreeImpl {
@@ -30,6 +31,8 @@ public class TreeImpl {
                         System.out.println("Enter integer element to insert");
                         head = bt.addNode(scan.nextInt(), head);
                     }
+                    bt.constructListFromtree(head);
+
                     break;
 
                 case 2:
@@ -38,12 +41,13 @@ public class TreeImpl {
 
                     boolean flag = bt.search(head, scan.nextInt());
                     if(flag)
-                    System.out.printf("Value Present");
+                    System.out.printf("Value Present:::" + flag);
                     else
-                        System.out.printf("Value not there");
+                        System.out.printf("Value not there:::" + flag);
                     break;
 
-
+                default:
+                    System.out.printf("Please Enter Correct Choice");
 
             } System.out.println("\n\nDo you want to continue (Type y or n) \n");
 
